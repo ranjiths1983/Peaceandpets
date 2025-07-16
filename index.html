@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peace & Pets - Affordable Pet Care Services</title>
-    <meta name="description" content="Professional veterinary care delivered to your home. Affordable pet care services with fear-free approach for all your pet's needs.">
+    <meta name="description" content="Affordable pet care services at your doorstep by fear-free certified and highly trained veterinary professionals.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,9 +16,10 @@
         }
 
         :root {
-            --primary-color: #e91e63;
-            --secondary-color: #9c27b0;
+            --primary-color: #2c5aa0;
+            --secondary-color: #4a90e2;
             --accent-color: #ff6b35;
+            --success-color: #27ae60;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
             --bg-light: #f8f9fa;
@@ -206,7 +207,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 Q40,10 60,20 Q80,30 100,20 L100,100 L0,100 Z" fill="rgba(233,30,99,0.05)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 Q40,10 60,20 Q80,30 100,20 L100,100 L0,100 Z" fill="rgba(44,90,160,0.05)"/></svg>');
             animation: wave 15s infinite ease-in-out;
         }
 
@@ -234,7 +235,7 @@
             font-size: 1.3rem;
             color: var(--text-light);
             margin-bottom: 3rem;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -263,7 +264,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            background: linear-gradient(135deg, var(--accent-color), var(--success-color));
             transition: left 0.3s ease;
             z-index: -1;
         }
@@ -277,10 +278,39 @@
             box-shadow: var(--shadow-hover);
         }
 
-        /* Services Section */
-        .services {
+        /* Introduction Section */
+        .intro {
             padding: 6rem 0;
             background: var(--white);
+            text-align: center;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro h2 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .intro p {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* What to Expect Section */
+        .expect {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--bg-light), #e8f5e8);
         }
 
         .section-title {
@@ -292,6 +322,58 @@
             background-clip: text;
             margin-bottom: 4rem;
             font-weight: 700;
+        }
+
+        .expect-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .expect-item {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expect-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .expect-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .expect-item h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .expect-item p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: var(--white);
         }
 
         .services-grid {
@@ -355,62 +437,18 @@
             color: var(--text-dark);
         }
 
-        /* What to Expect Section */
-        .expect {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, var(--bg-light), #e8f5e8);
+        .service-category {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
         }
 
-        .expect-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .expect-item {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .expect-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .expect-item:hover::before {
-            opacity: 0.05;
-        }
-
-        .expect-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .expect-item h4 {
+        .service-category h4 {
             color: var(--primary-color);
             font-size: 1.4rem;
             margin-bottom: 1rem;
             font-weight: 600;
-        }
-
-        .expect-item p {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            line-height: 1.7;
         }
 
         /* Contact Section */
@@ -514,6 +552,14 @@
                 font-size: 1.1rem;
             }
 
+            .intro h2 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
             .contact-details {
                 flex-direction: column;
                 gap: 2rem;
@@ -540,44 +586,28 @@
             }
         }
 
-        .service-card {
+        .service-card, .expect-item {
             animation: fadeInUp 0.6s ease forwards;
         }
 
-        .service-card:nth-child(2) {
+        .service-card:nth-child(2), .expect-item:nth-child(2) {
             animation-delay: 0.2s;
         }
 
-        .service-card:nth-child(3) {
+        .service-card:nth-child(3), .expect-item:nth-child(3) {
             animation-delay: 0.4s;
         }
 
-        .expect-item {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .expect-item:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .expect-item:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        .expect-item:nth-child(4) {
+        .service-card:nth-child(4), .expect-item:nth-child(4) {
             animation-delay: 0.6s;
         }
 
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+        .service-card:nth-child(5), .expect-item:nth-child(5) {
+            animation-delay: 0.8s;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .service-card:nth-child(6), .expect-item:nth-child(6) {
+            animation-delay: 1s;
         }
     </style>
 </head>
@@ -607,10 +637,9 @@
         <div class="container">
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#expect">What to Expect</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#grooming">Grooming</a></li>
-                <li><a href="#veterinary">Veterinary</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -620,8 +649,37 @@
         <div class="container">
             <div class="hero-content">
                 <h2>Welcome to Peace & Pets</h2>
-                <p>Affordable Pet Care Services - Local Veterinary Services & After Hours Home Services</p>
-                <a href="#contact" class="cta-button">Request an Appointment</a>
+                <p>Your trusted partner for comprehensive pet care services delivered with compassion and expertise</p>
+                <a href="#contact" class="cta-button">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Introduction</h2>
+                <p>Affordable pet care services at your doorstep by fear-free certified and highly trained veterinary professionals. We bring professional veterinary care directly to your home, ensuring your pets receive the best possible treatment in a comfortable and familiar environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expect" class="expect">
+        <div class="container">
+            <h2 class="section-title">What to Expect</h2>
+            <div class="expect-content">
+                <div class="expect-item">
+                    <h4>🛡️ Safe & Stress-Free Approach</h4>
+                    <p>Our fear-free certified professionals use gentle, stress-reducing techniques to ensure your pet feels comfortable and secure throughout their care.</p>
+                </div>
+                <div class="expect-item">
+                    <h4>🏥 All Types of Pet Care</h4>
+                    <p>From routine check-ups to specialized treatments, we provide comprehensive care services for all your pet's health and wellness needs.</p>
+                </div>
+                <div class="expect-item">
+                    <h4>🕊️ Peace of Mind</h4>
+                    <p>Rest assured knowing your beloved pets are in the hands of experienced, caring professionals who prioritize their comfort and well-being.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -630,134 +688,80 @@
         <div class="container">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
+                
                 <div class="service-card">
-                    <h3>🏠 Home Veterinary Care</h3>
-                    <ul>
-                        <li>Care delivered to your doorstep</li>
-                        <li>Comfort of your home</li>
-                        <li>Safe, peaceful environment</li>
-                        <li>Affordable pricing</li>
-                        <li>Highly trained professionals</li>
-                    </ul>
+                    <h3>🩺 Veterinary Care</h3>
+                    <div class="service-category">
+                        <h4>Medication Administration</h4>
+                        <ul>
+                            <li>RDVM approved medication services</li>
+                            <li>Professional injection administration</li>
+                            <li>Dosage monitoring and management</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>🩺 Veterinary Treatments</h3>
-                    <ul>
-                        <li>Anal Gland Expression</li>
-                        <li>Primary care for all situations</li>
-                        <li>Wound care & pain management</li>
-                        <li>Blood glucose monitoring</li>
-                        <li>Periodical medication</li>
-                        <li>Post-surgery management</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>✂️ Grooming Services</h3>
-                    <ul>
-                        <li>Nail trimming</li>
-                        <li>Ear cleaning</li>
-                        <li>Fear-free approach</li>
-                        <li>Stress-free practice</li>
-                        <li>For nervous & anxious pets</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="about" class="expect">
-        <div class="container">
-            <h2 class="section-title">What to Expect?</h2>
-            <div class="expect-content">
-                <div class="expect-item">
-                    <h4>🏠 Home Comfort</h4>
-                    <p>Care delivered right to your doorstep in the comfort of your home - safely, peacefully and with affordable price.</p>
+                <div class="service-card">
+                    <h3>📊 Monitoring Care</h3>
+                    <div class="service-category">
+                        <ul>
+                            <li>Blood Pressure Monitoring</li>
+                            <li>Blood Glucose Monitoring</li>
+                            <li>Post-operative Care and Monitoring</li>
+                            <li>Continuous health assessment</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="expect-item">
-                    <h4>👨‍⚕️ Professional Care</h4>
-                    <p>Highly trained & certified professionals with fear-free approach are able to help your pet at all stages of life and health.</p>
-                </div>
-                <div class="expect-item">
-                    <h4>💝 Compassionate Service</h4>
-                    <p>Compassionate care provided right in the comfort of your home. Safe, peaceful and with affordable price.</p>
-                </div>
-                <div class="expect-item">
-                    <h4>🐾 All Pets Welcome</h4>
-                    <p>We are able to help your pet at all stages of it's life and health. From puppies to senior pets, we care for all.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="veterinary" class="services">
-        <div class="container">
-            <h2 class="section-title">Veterinary Treatments</h2>
-            <div class="services-grid">
                 <div class="service-card">
-                    <h3>🩺 Primary Care</h3>
-                    <ul>
-                        <li>Anal Gland Expression</li>
-                        <li>Wound care</li>
-                        <li>Pain management</li>
-                        <li>Fluid retention treatment</li>
-                        <li>Periodontal teeth cleaning</li>
-                        <li>Oral care</li>
-                    </ul>
+                    <h3>✂️ Grooming & Self Care</h3>
+                    <div class="service-category">
+                        <ul>
+                            <li>Cat grooming, Lion cut (non-sedation)</li>
+                            <li>Dog grooming and de-matting</li>
+                            <li>Nail trimming</li>
+                            <li>Anal gland expression</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>🔬 Monitoring & Testing</h3>
-                    <ul>
-                        <li>Blood glucose monitoring</li>
-                        <li>Blood pressure monitoring</li>
-                        <li>Health assessments</li>
-                        <li>Regular check-ups</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>💊 Medication Services</h3>
-                    <ul>
-                        <li>SOF injections (RDVM approval)</li>
-                        <li>Insulin, librela, cartrophen</li>
-                        <li>Cytopoint, solensia, B12</li>
-                        <li>Post-surgery management</li>
-                        <li>Medication administration</li>
-                    </ul>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: #666;">
-                Services vary widely from patient to patient on a case basis. Please contact for more info.
-            </p>
-        </div>
-    </section>
 
-    <section id="grooming" class="services" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Cat & Dog Grooming</h2>
-            <div class="services-grid">
                 <div class="service-card">
-                    <h3>💅 Nail Care</h3>
-                    <ul>
-                        <li>Professional nail trimming</li>
-                        <li>Safe and gentle techniques</li>
-                        <li>Stress-free environment</li>
-                    </ul>
+                    <h3>🦷 Teeth Cleaning</h3>
+                    <div class="service-category">
+                        <ul>
+                            <li>Non-sedative periodontal teeth cleaning</li>
+                            <li>Non-anesthetic dental care</li>
+                            <li>Oral health maintenance</li>
+                            <li>Preventive dental care</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <h3>👂 Ear Cleaning</h3>
-                    <ul>
-                        <li>Thorough ear cleaning</li>
-                        <li>Health assessment</li>
-                        <li>Gentle approach</li>
-                    </ul>
+                    <h3>🏥 Primary Care</h3>
+                    <div class="service-category">
+                        <ul>
+                            <li>Wound care and management</li>
+                            <li>Pain management</li>
+                            <li>General health assessments</li>
+                            <li>Preventive care services</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <h3>😊 Fear-Free Approach</h3>
-                    <ul>
-                        <li>Experts in fear-free practice</li>
-                        <li>Specialized for nervous pets</li>
-                        <li>Anxious pet specialists</li>
-                        <li>Calm environment</li>
-                    </ul>
+                    <h3>🔧 Other Services</h3>
+                    <div class="service-category">
+                        <ul>
+                            <li>Customized care plans</li>
+                            <li>Case-specific treatments</li>
+                            <li>Specialized procedures</li>
+                            <li>Please contact for details</li>
+                        </ul>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-light); margin-top: 1rem;">
+                        Services vary from case to case. Contact us to discuss your pet's specific needs.
+                    </p>
                 </div>
             </div>
         </div>
@@ -767,7 +771,7 @@
         <div class="container">
             <div class="contact-content">
                 <h2 class="section-title" style="color: white;">Contact Us</h2>
-                <p style="font-size: 1.3rem; margin-bottom: 3rem;">Ready to give your pet the care they deserve? Get in touch with us today!</p>
+                <p style="font-size: 1.3rem; margin-bottom: 3rem;">Ready to give your pet the professional care they deserve? Get in touch with us today!</p>
                 <div class="contact-details">
                     <div class="contact-detail">
                         <div class="contact-detail-icon">📞</div>
@@ -793,7 +797,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Peace & Pets. All rights reserved. | Affordable Pet Care Services | Local Veterinary Services & After Hours Home Services</p>
+            <p>&copy; 2025 Peace & Pets. All rights reserved. | Affordable Pet Care Services | Fear-Free Certified Veterinary Professionals</p>
         </div>
     </footer>
 
@@ -834,7 +838,7 @@
             });
         });
 
-        // Intersection Observer for fade-in animations
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -848,11 +852,6 @@
             });
         }, observerOptions);
 
-        // Observe all elements with fade-in class
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
         // Enhanced hover effects
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
@@ -862,16 +861,6 @@
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
             });
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero');
-            if (parallax) {
-                const speed = scrolled * 0.5;
-                parallax.style.transform = `translateY(${speed}px)`;
-            }
         });
 
         // Add loading animation
